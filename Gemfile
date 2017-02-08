@@ -24,6 +24,8 @@ gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'mini_magick'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'devise'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
