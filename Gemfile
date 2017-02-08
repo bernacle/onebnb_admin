@@ -21,6 +21,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'mini_magick'
+gem 'cloudinary'
+gem 'carrierwave'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
