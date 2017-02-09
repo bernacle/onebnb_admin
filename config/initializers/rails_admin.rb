@@ -1,19 +1,21 @@
 RailsAdmin.config do |config|
-
-
+  config.main_app_name = Proc.new { |controller| [ "OneBnb", "Admin - #{controller.params[:action].try(:titleize)}" ] }
+ 
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-
+ 
   config.authorize_with do
     if current_user.kind != "admin"
       reset_session
       redirect_to '/users/sign_in'
     end
-  end 
-
+  end
+ 
+  config.excluded_models << "Photo"
+ 
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -24,9 +26,5 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-
-    ## With an audit adapter, you can add:
-    # history_index
-    # history_show
   end
 end

@@ -26,6 +26,8 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'devise'
 gem 'rails_admin_rollincode', '~> 1.0' , :git => 'https://github.com/bernacle/rails_admin_customized.git'
+gem 'searchkick'
+
 
 
 
